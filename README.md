@@ -18,3 +18,4 @@
 ### 4) Table Creation (using rows, cols and color as input and dynamically creating a table)
 - Created an HTML page that takes 3 input from the user i.e. a row size, a column size and a color picker. Once the user submits the given input, the JS code would create a table dynamically with the specified number of rows and columns and the specified color set as background color.
 
+![](https://github.com/zaahidali/Web-Engineering-Lab/blob/master/Week%201/week1Gifs/Task4.gif)
