@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2</title>
+</head>
+
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .pic1{
+        width: 100%;
+        height: auto;
+        
+    }
+</style>
+
+
+
+
+<!-- ------------- CSS Ends here -->
+<body>
+    <h1><center>Task 2</center></h1>
+
+    <!-- Slider Code -->
+    <div class="slider">
+        <img src="images/1.jpg" alt="sea side view pic1" class="pic1">
+        <img src="images/2.jpg" alt="sea side view pic2" class="pic1">
+        <img src="images/3.jpg" alt="sea side view pic3" class="pic1">
+        <img src="images/4.jpg" alt="sea side view pic4" class="pic1">
+    </div>
+
+
+</body>
+    <script>
+        var index=0;
+        Carousel();
+        function Carousel()
+        {
+            var i;
+
+            var x = document.getElementsByClassName('pic1');
+            for(i=0; i<x.length; i++)
+            {
+                if(i==index)
+                {
+                    x[i].style.display = "block";
+                }
+                else{
+                    x[i].style.display = "none";
+                }
+            }
+            index++;
+            if(index>=x.length)
+            {
+                index = 0;
+            }
+            setTimeout(Carousel,5000);
+        }
+
+    </script>
+
+</html> 

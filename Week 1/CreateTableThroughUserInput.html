@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2</title>
+</head>
+<style>
+    .user-input{
+        display: flex;
+        justify-content: center;
+    }
+    .table-div{
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<body>
+    <h1><center>Task 4</center></h1>
+    <center>Row:<input type="text" id="text1" placeholder="Enter the number of Rows" autocapitalize="off" /></center>
+    <center> Column:<input id='text2' type="text" name=""  placeholder="Enter the number of Columns"></center>
+    <!-- <center> Background Color:<input id='text3' type="text" name="" placeholder="Enter the Background color you like"></center> -->
+
+    <center>
+        <p>Please Choose a Color to create table</p>
+        <input type='color' value="#001A57" id ='clr' onchange="createTable()">
+    </center>
+
+
+    <div class="table-div">
+        <table id="myTable" border="3"> 
+        </table>
+    </div>
+    <form> 
+        <!-- <center><input type="button" onclick="createTable()" value="Create table"></center>  -->
+    </form>
+
+</body>
+    <script>
+
+    function createTable(){
+        var rowSize = document.getElementById("text1").value;
+        var colSize = document.getElementById("text2").value;
+        // var backgroundCol = document.getElementById("text3").value;
+
+        for(var r=0;r<rowSize;r++)
+        {
+        var x=document.getElementById('myTable').insertRow(r);
+        for(var c=0;c<colSize;c++)  
+            {
+            var y=  x.insertCell(c);
+            y.innerHTML="T["+r+"]"+"["+c+"]"; 
+            }
+        }
+        // document.getElementById('myTable').bgColor = backgroundCol;
+        changeColor();
+    }
+    function changeColor(){
+        let dd1 = document.getElementById('myTable');
+        var colorInput = document.getElementById('clr');
+        var color = colorInput.value;
+        dd1.style.backgroundColor=color;
+    }
+    </script>
+</html> 

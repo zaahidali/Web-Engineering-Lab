@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<style>
+#outer-div {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: black;
+  border: solid red 3px;
+}
+#inner-div {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: yellow;
+}
+</style>
+<body>
+    <center><h1>Task 3</h1></center>
+<!-- <p>
+<button onclick="myMove()">Click Me</button> 
+</p> -->
+<!-- <script>
+    myMove();
+</script> -->
+
+    <center><div id ="outer-div">
+        <div id ="inner-div"></div>
+    </div></center>
+
+    <script>
+
+    function myMove() 
+    {
+    
+    var elem = document.getElementById("inner-div");
+    var left = 0;
+    var top = 0;
+    var id = setInterval(frame, 1);
+    elem.style.left = "0px";
+    elem.style.top = "0px"
+    
+
+    function frame() {
+        if (left < 350 && top == 0) {
+        left++;
+        elem.style.left = left + "px";
+        } else if (left == 350 && top < 350) {
+        top++;
+        elem.style.top = top + "px";
+        } else if (top == 350 && left > 0) {
+        left--;
+        elem.style.left = left + "px";
+        }
+        else {
+        // clearInterval(id);
+        top--;
+        elem.style.top = top + "px";
+        }
+    }
+    }
+        setTimeout(myMove,4);
+    </script>
+
+</body>
+</html>
