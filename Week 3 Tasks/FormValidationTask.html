@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>Form Validation Example</title>
+
+<style>
+    span{
+        color:red;
+    }
+</style>
+
+</head>
+<body>
+
+  <h3>Write Javascript code to validate the fields</h3>
+  <p>The description of the validation is given along the input field,
+     use the description to perform the required validation using JS
+  </p>
+  <hr width="100%">
+
+<form action="/" method="GET" id="signup_form">
+	
+	<p>
+		<label>CNIC validtion using format (12345-1234567-1) <input type="text" name="name" id="name" autocomplete="off" maxlength=15 autofocus tabindex="1"> 
+			</label><span></span>
+	</p>
+	
+	<p>
+		<label>Password must not contain these 3 characters ($,%,*)<input type="password" name="password" id="pass" placeholder="password" ></label>
+        <span></span></p>
+	<p>
+		<label>The upper password should match <input type="password" name="cpassword" id="cpass" placeholder="confirm password"></label>
+        <span></span></p>
+
+	<p>
+	The length of characters in text area must not exceed 50 : 
+  <textarea name="ta" id="textArea"></textarea>
+  </p><span style="color: red"></span>
+
+  <p>
+  Validate so user cannot select the first value i.e. (-- Select a value --) : 
+  <select name="select" id="bestSelect">
+    <option id="firstOp">-- Select a value --</option>
+    <option id="secOp">Value 1</option>
+    <option >Value 2</option>
+  </select>
+  </p><span></span>
+
+  <p>
+  Not more than two checkboxes can be selected, if all 3 are selected it should not submit: 
+  <input type="checkbox" name="cb[]" id="c1" /> Checkbox1 
+  <input type="checkbox" name="cb[]" id="c2" /> Checkbox2
+  <input type="checkbox" name="cb[]" id="c3"> Checkbox3
+  </p><span></span>
+
+
+
+  	<p>
+  		If any value other than the suggestion is selected, it should not submit
+	   <input list="programme" id="datalistVal">
+	   <datalist id="programme">
+		   <option id="bc1" value="BCS">
+		   <option id="bc2" value="BSSE">
+		   <option id="bc3" value="BBA">
+		   <option id="bc4" value="MBA">
+		   <option id="bc5" value="BS Economics">
+	  </datalist>
+  	</p><span></span>
+
+
+      <p>
+      This input field must contain a valid email (emails have @ symbol) 
+      <input type="text" name="email" id="email"/>
+      </p><span></span>
+
+      <p>
+      The number insert should be between 1 and 1000, any other number should not submit form 
+      <input type="number" name="number" id="numberChecker">
+      </p><span></span>
+
+  <p>    
+		<input type="submit" name="submit" id= "submit" value="Submit Form">
+	</p>
+
+</form>
+
+
+<script src="script.js"></script>
+</body>
+</html>
